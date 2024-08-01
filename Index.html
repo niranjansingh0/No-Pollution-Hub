@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="icon/png" href="favicon.png">
+	<title>Pollution Awareness</title>
+</head>
+
+<body>
+<section class="first">
+
+								<!--LANDING PAGE-->
+
+<!--Resources-->
+	<div class="bannerVideo" id="slideShow">
+		<video src="./video/video1.mp4" autoplay muted loop class="active" type="video/mp4"></video>
+		<video src="./video/video2.mp4" autoplay muted loop></video>
+		<video src="./video/video3.mp4" autoplay muted loop></video>
+		<!--<video src="video4.mp4" autoplay muted loop></video>-->
+	</div>
+
+<!-- Navbar -->
+	<div class="container">
+		<header id="navbar">
+			<a href="#" class="logo">Pollution</a>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<!--<li><a href="#">Newsroom</a></li>
+				<li><a href="#" >Events</a></li>-->
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#contactus">Contact Us</a></li>
+				<li><a href="./login.html">Log In / Sign Up</a></li>
+			</ul>
+			<span class="menuIcon" onclick="toggleMenu();"></span>
+		</header>
+
+<!--Video Intro-->
+		<div class="content">
+			<div class="bannerText" id="slideShowText">
+				<div class="active">
+					<h2>Air Pollution</h2>
+					<p >Air pollution refers to the contamination of the atmosphere by harmful substances that can adversely affect the health of humans and other living beings, as well as cause damage to the climate and materials. This pollution can also negatively impact food crops and degrade the natural environment, contributing to issues such as climate change, ozone depletion, and habitat degradation. The presence of these pollutants in the air poses significant risks to both public health and the ecosystem..</p>
+					<a href="#air" class="readmore">Read More</a>
+				</div>
+				<div>
+					<h2>Water Pollution</h2>
+					<p>Water pollution, also known as aquatic pollution, occurs when water bodies are contaminated by harmful substances, typically due to human activities. This contamination negatively impacts the water’s legitimate uses and diminishes its capacity to provide essential ecosystem services. As a result, water pollution can harm aquatic life, disrupt ecosystems, and pose serious health risks to humans and other living beings that rely on these water sources.</p>
+					<a href="#water" class="readmore">Read More</a>
+				</div>
+				<div>
+					<h2>Land Pollution</h2>
+					<p>Land pollution, also known as soil contamination or soil pollution, is a form of land degradation caused by the presence of human-made chemicals or other alterations in the natural soil environment. This type of pollution is typically the result of industrial activities, the use of agricultural chemicals, or the improper disposal of waste. These pollutants can harm plant and animal life, reduce soil fertility, and pose significant health risks to humans. Addressing land pollution is crucial for maintaining healthy ecosystems and ensuring sustainable land use.</p>
+					<a href="#land" class="readmore">Read More</a>
+				</div>
+				<!--<div>
+					<h2>Sound</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>-->
+			</div>
+		</div>
+
+<!--Sticky Socials-->
+		<!-- <ul class="sci">
+			<li><a href="#"><img src="facebook1.png"></a></li>
+			<li><a href="#"><img src="insta.png"></a></li>
+			<li><a href="#"><img src="twitter1.png"></a></li>
+		</ul> -->
+
+<!--Arrows-->
+		<ul class="controls">
+			<li onclick="prevSlide();prevSlideText();"><img src="left.png"></li>
+			<li onclick="nextSlide();nextSlideText();"><img src="right.png"></li>
+		</ul>
+	</div>
+</section>
+
+<!--Arrow Controls-->
+<script type="text/javascript">
+	const slideShow = document.getElementById('slideShow');
+	const slides = slideShow.getElementsByTagName('video');
+	var index = 0;
+	function nextSlide(){
+		slides[index].classList.remove('active');
+		index = (index + 1) % slides.length;
+		slides[index].classList.add('active');
+	}
+	function prevSlide(){
+		slides[index].classList.remove('active');
+		index = (index - 1 + slides.length) % slides.length;
+		slides[index].classList.add('active');
+	}
+
+
+    const slideShowText = document.getElementById('slideShowText');
+	const slidesText = slideShowText.getElementsByTagName('div');
+	var i = 0;
+	function nextSlideText(){
+		slidesText[i].classList.remove('active');
+		i = (i + 1) % slidesText.length;
+		slidesText[i].classList.add('active');
+	}
+	function prevSlideText(){
+		slidesText[i].classList.remove('active');
+		i = (i - 1 + slidesText.length) % slidesText.length;
+		slidesText[i].classList.add('active');
+	}
+	function toggleMenu(){
+		const menuIcon = document.querySelector('.menuIcon');
+		const navbar = document.getElementById('navbar');
+		menuIcon.classList.toggle('active');
+		navbar.classList.toggle('active');
+	}
+</script>
+
+								<!--AIR PAGE-->
+<section class="second">
+	<div class="air">
+		<a name = "air" class="air"><h1>Air Pollution</h1></a>
+		<p class="desca">Air pollution refers to the release of harmful pollutants into the atmosphere, posing significant threats to human health and the environment. Currently, nine out of ten people worldwide breathe air that surpasses the World Health Organization’s recommended limits for pollutants. This issue is particularly acute in low- and middle-income countries, where the adverse effects of air pollution are most pronounced, impacting millions of lives and exacerbating environmental degradation.</p>
+		<div class="totalair">
+			<div class="prosair">
+				<h3>Causes</h3>
+				<p>Household combustion devices, motor vehicles, industrial facilities, and forest fires are common sources of air pollution. Key pollutants of public health concern include particulate matter, carbon monoxide, ozone, nitrogen dioxide, and sulfur dioxide. Smog, another form of air pollution, is exacerbated by increased heat and ultraviolet radiation during warmer weather. Additionally, fumes from paint, hair spray, varnish, aerosol sprays, and other solvents contribute to air pollution. Aviation also plays a significant role in contributing to air pollution.</p>
+			</div>
+
+			<div class="prosair">
+				<h3>Preventions</h3>
+				<p>Reducing gasoline consumption is essential for minimizing air pollution and combating climate change. Making smart transportation choices, such as walking, biking, or using public transportation, can significantly lower our carbon footprint. When driving is necessary, opting for fuel-efficient or electric vehicles can make a big difference. Additionally, exploring renewable energy options for your home, like wind or solar power, can further reduce your environmental impact. Supporting local food producers also helps cut down on the fossil fuels used in transporting goods over long distances. By adopting these practices, we can collectively work towards a cleaner, healthier planet.
+					</p>
+			</div>
+
+			<div class="prosair">
+				<h3>Facts</h3>
+				<p>Air pollution is a significant risk factor for numerous pollution-related diseases, including respiratory infections, heart disease, chronic obstructive pulmonary disease (COPD), stroke, and lung cancer. Outdoor air pollution alone is responsible for causing between 2.1 to 4.21 million deaths annually, making it one of the leading contributors to human mortality. Data indicates that nearly the entire global population (99%) breathes air that exceeds the World Health Organization (WHO) guideline limits, containing high levels of pollutants. Low- and middle-income countries suffer the highest exposures, leading to severe health impacts in these regions.</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+								<!--WATER PAGE-->
+<section class="third">
+		<div class="water">
+				<a name = "water" class="water"><h1>Water Pollution</h1></a>
+				<p class="descw">Water pollution occurs when harmful substances, such as chemicals or microorganisms, contaminate bodies of water like streams, rivers, lakes, oceans, or aquifers. This contamination degrades the water quality, making it toxic to both humans and the environment. The presence of these pollutants can disrupt aquatic ecosystems, harm wildlife, and pose serious health risks to people who rely on these water sources for drinking, recreation, and other purposes. Addressing water pollution is essential for protecting public health and preserving the natural environment.
+
+
+
+				</p>
+				<div class="totalwater">
+					<div class="proswater">
+						<h3>Causes</h3>
+						<p>Water is uniquely vulnerable to pollution due to its ability to dissolve more substances than any other liquid on Earth, earning it the title of a “universal solvent.” Water pollution typically stems from four main sources: sewage, industrial activities, agriculture, and urban runoff, including stormwater. For instance, discharging inadequately treated wastewater into natural water bodies can degrade aquatic ecosystems. Additionally, water pollution can cause water-borne diseases for people who use contaminated water for drinking, bathing, washing, or irrigation. Addressing these pollution sources is crucial for maintaining clean and safe water for all.</p>
+					</div>
+								
+					<div class="proswater">
+						<h3>Preventions</h3>
+						<p>Preventing water pollution involves several practical steps that everyone can take. Start by reducing your plastic consumption and making an effort to reuse or recycle plastic items whenever possible. Proper disposal of chemical cleaners, oils, and nonbiodegradable items is crucial to prevent them from going down the drain and contaminating water sources. Regularly maintain your car to avoid leaks of oil, antifreeze, or coolant. Be cautious about what you pour into storm sewers, as this waste often goes untreated before entering local waterways. If you see a storm sewer blocked by litter, clean it up to prevent trash from polluting the water. Additionally, avoid applying fertilizer to your lawn right before it rains, as the chemicals can wash into storm drains and waterways. By adopting these practices, we can all contribute to cleaner and safer water for everyone.
+						</p>
+					</div>
+								
+					<div class="proswater">
+						<h3>Facts</h3>
+						<p>Approximately 785 million people worldwide lack access to clean drinking water due to pollution. Industrial activities contribute significantly to this issue, with around 70% of industrial waste being dumped into water bodies, polluting the usable water supply. Each year, industries discharge an estimated 300-400 million tonnes of polluted waste into water bodies, including millions of tonnes of heavy metals, solvents, toxic sludge, and other hazardous materials. Additionally, about 14 billion pounds of garbage, mostly plastic, are dumped into the ocean annually. This pollution has severe health consequences, leading to the deaths of approximately 15 million children under the age of five each year due to water-borne diseases. Addressing water pollution is crucial for ensuring safe drinking water and protecting public health.</p>
+					</div>		
+				</div>
+		</div>
+</section>
+
+										<!--LAND PAGE-->
+<section class="fourth">
+	<div class="land">
+		<a name = "land" class="land"><h1>Land Pollution</h1></a>
+		<p class="desc">Land pollution refers to the deterioration of the earth’s land surfaces, both at and below ground level, primarily caused by the accumulation of solid and liquid waste materials. These pollutants contaminate groundwater and soil, leading to significant environmental degradation. The improper disposal of industrial, agricultural, and household waste contributes to this issue, posing risks to plant and animal life, reducing soil fertility, and potentially causing health problems for humans. Addressing land pollution is essential for maintaining healthy ecosystems and ensuring sustainable land use..</p>
+			<div class="totalland">
+				<div class="prosland">
+					<h3>Causes</h3>
+					<p>Land pollution is primarily caused by the presence of harmful chemicals such as petroleum hydrocarbons, polynuclear aromatic hydrocarbons (like naphthalene and benzo(a)pyrene), solvents, pesticides, lead, and other heavy metals. The extent of contamination is closely linked to the level of industrialization and the intensity of chemical use. These pollutants often originate from soil microbial activity and the decomposition of organisms. Additionally, various compounds can enter the soil from the atmosphere through precipitation, wind activity, or other types of soil disturbances. Addressing these causes is essential for mitigating land pollution and protecting the environment..</p>
+				</div>
+
+				<div class="prosland">
+					<h3>Preventions</h3>
+					<p>Preventing land pollution involves several key practices. Reducing the use of pesticides and chemical fertilizers is crucial, as these substances not only contaminate the soil but also harm crops. Farmers can switch to natural alternatives like bio-fertilizers and manure to minimize pollution. Reforestation is another important strategy, as planting trees helps protect the land from pollution, floods, and soil erosion. Additionally, adopting the principles of “Reduce, Reuse, and Recycle” in our daily lives can significantly contribute to a cleaner environment. By making these changes, we can work towards a healthier and more sustainable planet..</p>
+				</div>
+
+				<div class="prosland">
+					<h3>Facts</h3>
+					<p>Land pollution is a significant environmental issue, with energy production and food waste accounting for about 80% of the problem. Surprisingly, 80% of the items in landfills are recyclable, highlighting the need for better waste management practices. Each year, the planet loses 24 billion tonnes of topsoil due to land pollution, which severely impacts agricultural productivity. Agricultural activities, including the use of fertilizers, pesticides, irrigation, and improper disposal of animal waste, contribute significantly to land pollution. Additionally, half of the global population consumes water that is unsafe due to contamination from land pollution. Addressing these issues is crucial for protecting our environment and ensuring a sustainable future.
+					</p>
+				</div>
+			
+			</div>
+	</div>
+</section>
+
+<div class="contact-wrapper">
+	<a name="contactus" class="contactus"></a>
+	<div id="contact">
+	  <div class="contact-heading">
+		<h1>Contact Me</h1>
+		<p>Questions, Thoughts, Or Just Want To Say Hello?</p>
+	  </div>
+
+	  <div class="contact-input-form">
+		<label for="input-name"></label>
+		<input id="input-name" type="text" placeholder="Enter your name" />
+
+		<label for="input-email"></label>
+		<input
+		  id="input-email"
+		  type="text"
+		  placeholder="Enter your email address"
+		/>
+
+		<label for="input-subject"></label>
+		<input
+		  id="input-subject"
+		  type="text"
+		  placeholder="Enter your subject"
+		/>
+
+		<label for="message-area"></label>
+		<textarea
+		  name=""
+		  id="message-area"
+		  cols="30"
+		  rows="10"
+		  placeholder="Enter your message"
+		></textarea>
+
+		<button class="contact-me-button">
+		  Send Message <i class="fa-solid fa-paper-plane"></i>
+		</button>
+	  </div>
+	</div>
+  </div>
+
+<!--FOOTER-->
+<section class="footer">
+	<a name="aboutus" class="aboutus"></a>
+		<h4>About Us</h4>
+		<p>We are students of AJAY KUMAR GARG ENGINEERING COLLEGE, <br> trying to spread awareness in the world about the rising pollution,
+		facilitate real-time monitoring, <br>and encourage community involvement in pollution control efforts.</p>
+		<br>
+		<p>Made by Team Error</p>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    
+
+</body>
+</html>
